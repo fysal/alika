@@ -201,9 +201,9 @@ const CreateEventForm: React.FC = () => {
         {currentStep === 2 && (
           <>
             <div className="form-control border border-dashed border-2 rounded-xl p-6">
-              <label htmlFor="bannerImage" className="label">
-                <span className="label-text">Banner Image</span>
-              </label>
+              <div className="label">
+                <span className="label-text">Event Banner (Landscape)</span>
+              </div>
               <input
                 type="file"
                 id="bannerImage"
@@ -211,34 +211,88 @@ const CreateEventForm: React.FC = () => {
                 onChange={(e) => handleImageUpload(e, setBannerImage)}
                 className="input input-bordered bg-slate-100 hidden"
               />
-              {bannerImage && (
-                <Image
-                  src={bannerImage}
-                  alt="Banner Preview"
-                  className="mt-4 max-w-full h-auto rounded-lg shadow-md"
-                  width={500}
-                  height={500}
-                />
+              {bannerImage ? (
+                <div className="grid grid-cols-4 gap-3 items-center">
+                  <Image
+                    src={bannerImage}
+                    alt="Banner Preview"
+                    className="mt-4 max-w-full h-auto rounded-lg shadow-md col-span-3"
+                    width={800}
+                    height={500}
+                  />
+                  <div>
+                    <div className="text-lg font-bold mb-5 text-slate-500">
+                      Banner Image
+                    </div>
+                    <label htmlFor="bannerImage">
+                      <span className="bg-purple-600 rounded-md p-3 text-sm">
+                        Replace
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-6">
+                  <h2 className="text-xl text-center font-bold mb-3">
+                    Upload Banner here
+                  </h2>
+                  <div className="mb-5">
+                    For bast result upload should be at least <br /> 1920 x 1080
+                    pixels
+                    <br />
+                    (Landscape)
+                  </div>
+                  <label
+                    htmlFor="bannerImage"
+                    className="text-center cursor-pointer"
+                  >
+                    <span className="label-text bg-purple-500 p-3 rounded-md text-slate-900">
+                      Banner Image
+                    </span>
+                  </label>
+                </div>
               )}
             </div>
 
-            <div className="form-control">
-              <label htmlFor="portraitImage" className="label">
+            <div className="form-control border border-dashed border-2 rounded-xl p-6">
+              <div className="label">
                 <span className="label-text">Event Artwork (Portrait)</span>
-              </label>
+              </div>
               <input
                 type="file"
                 id="portraitImage"
                 accept="image/*"
                 onChange={(e) => handleImageUpload(e, setPortraitImage)}
-                className="input input-bordered bg-slate-100"
+                className="input input-bordered bg-slate-100 hidden"
               />
-              {portraitImage && (
-                <img
+              {portraitImage ? (
+                <Image
                   src={portraitImage}
                   alt="Portrait Preview"
                   className="mt-4 max-w-full h-auto rounded-lg shadow-md"
+                  width={800}
+                  height={500}
                 />
+              ) : (
+                <div className="text-center py-6">
+                  <h2 className="text-xl text-center font-bold mb-3">
+                    Upload Artwork here
+                  </h2>
+                  <div className="mb-5">
+                    For bast result upload should be at least <br /> 800 x 1080
+                    pixels
+                    <br />
+                    (Portrait)
+                  </div>
+                  <label
+                    htmlFor="portraitImage"
+                    className="text-center cursor-pointer"
+                  >
+                    <span className="label-text bg-purple-500 p-3 rounded-md text-slate-900">
+                      Select File to Upload
+                    </span>
+                  </label>
+                </div>
               )}
             </div>
           </>
