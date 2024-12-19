@@ -266,13 +266,25 @@ const CreateEventForm: React.FC = () => {
                 className="input input-bordered bg-slate-100 hidden"
               />
               {portraitImage ? (
-                <Image
-                  src={portraitImage}
-                  alt="Portrait Preview"
-                  className="mt-4 max-w-full h-auto rounded-lg shadow-md"
-                  width={800}
-                  height={500}
-                />
+                <div className="grid grid-cols-4 gap-3 items-center">
+                  <Image
+                    src={portraitImage}
+                    alt="Portrait Preview"
+                    className="mt-4 max-w-full h-auto rounded-lg shadow-md col-span-3"
+                    width={800}
+                    height={500}
+                  />
+                  <div>
+                    <div className="text-lg font-bold mb-5 text-slate-500">
+                      Event Art
+                    </div>
+                    <label htmlFor="portraitImage">
+                      <span className="bg-purple-600 rounded-md p-3 text-sm">
+                        Replace
+                      </span>
+                    </label>
+                  </div>
+                </div>
               ) : (
                 <div className="text-center py-6">
                   <h2 className="text-xl text-center font-bold mb-3">
@@ -339,7 +351,7 @@ const CreateEventForm: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => removeTicketTier(index)}
-                    className="btn btn-error w-full mt-2"
+                    className="btn btn-error end mt-2"
                   >
                     Remove Tier
                   </button>
