@@ -6,12 +6,14 @@ const MainMenu = () => {
   const menuItems = [
     { name: "home", link: "/" },
     { name: "Find event", link: "/find" },
-    { name: "Create event", link: "/create-event" },
+    { name: "Create event", link: "/event/create" },
   ];
   return (
     <div className="navbar text-purple-600 bg-slate-950 shadow ">
       <div className="flex-1">
-        <a className="btn btn-ghost text-4xl my-2">Alika</a>
+        <Link href="/" className="btn btn-ghost text-4xl my-2">
+          Alika
+        </Link>
       </div>
       <ul className=" flex-1 flex items-center gap-10 capitalize flex-grow">
         {menuItems.map((menuItem, index: number) => (

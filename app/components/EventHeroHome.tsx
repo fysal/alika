@@ -27,7 +27,7 @@ const EventHeroHome = () => {
             intimate boutique occasions.
           </p>
           <Link
-            href="/create"
+            href="/event/create"
             className="btn text-slate-300 bg-slate-800 uppercase px-5 rounded-md "
           >
             Create event
