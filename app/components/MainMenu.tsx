@@ -12,7 +12,7 @@ const MainMenu = () => {
     <div className="navbar text-purple-600 bg-slate-950 shadow ">
       <div className="flex-1">
         <Link href="/" className="btn btn-ghost text-4xl my-2">
-          Alikat
+          Alika
         </Link>
       </div>
       <ul className=" flex-1 flex items-center gap-10 capitalize flex-grow">
