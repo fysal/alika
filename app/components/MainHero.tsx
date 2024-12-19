@@ -28,7 +28,7 @@ const MainHero = () => {
               spectacular experien
             </p>
             <Link
-              href="#"
+              href="/event/diwali/view"
               className="btn  text-slate-300 bg-slate-800 uppercase px-5"
             >
               Buy a ticket
