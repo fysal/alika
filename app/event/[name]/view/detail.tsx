@@ -31,7 +31,7 @@ const EventPage = () => {
       "Join us for an unforgettable experience at Mawingu Saltys! A night of music, art, and celebration.",
     date: "2025-05-15",
     time: "7:00 PM",
-    location: "Saltys Club, Nairobi",
+    location: "Saltys Club, Kampala",
     imageUrl: "https://via.placeholder.com/800x400",
     portraitUrl: "https://via.placeholder.com/300x450",
     ticketTiers: [
@@ -39,7 +39,7 @@ const EventPage = () => {
       { name: "VIP", price: 50, available: 50 },
       { name: "Early Bird", price: 15, available: 200 },
     ],
-    countdownDate: "2024-05-15T19:00:00",
+    countdownDate: "2025-05-15T08:00:00",
   };
   const [timeRemaining, setTimeRemaining] = useState<string>("");
   // const router = useRouter();
@@ -110,8 +110,8 @@ const EventPage = () => {
       </div>
 
       {/* Event Details Section */}
-      <div className="flex flex-col md:flex-row space-y-6 md:space-x-12 md:space-y-0">
-        <div className="md:w-1/2">
+      <div className="flex flex-col items-start md:flex-row space-y-6 md:space-x-12 md:space-y-0">
+        <div className="md:w-1/2 py-8">
           <h3 className="text-2xl font-semibold mb-4">Event Description</h3>
           <p>{event.description}</p>
         </div>
@@ -129,13 +129,13 @@ const EventPage = () => {
       </div>
 
       {/* Countdown Timer */}
-      <div className="bg-gray-100 p-4 rounded-lg text-center mb-8">
-        <h4 className="text-lg font-semibold">Event Countdown</h4>
+      <div className="bg-gray-100 p-4 rounded-lg text-center mb-8 py-14">
+        <h4 className="text-lg font-semibold mb-3">Event Countdown</h4>
         <div className="text-xl text-green-500">{timeRemaining}</div>
       </div>
 
       {/* Ticket Tier Section */}
-      <div className="mb-8">
+      <div className="mb-8 py-8">
         <h3 className="text-2xl font-semibold mb-4">Available Tickets</h3>
         <div className="space-y-4">
           {event.ticketTiers.map((tier, index) => (
@@ -182,9 +182,6 @@ const EventPage = () => {
       </div>
 
       {/* Sticky "Buy Tickets" Button */}
-      <div className="fixed bottom-8 right-8 z-50">
-        <button className="btn btn-lg btn-primary">Buy Tickets</button>
-      </div>
     </div>
   );
 };
