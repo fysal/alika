@@ -2,7 +2,7 @@ import React from "react";
 
 const Stats = () => {
   return (
-    <div className="contianer text-center py-10">
+    <div className="contianer text-center py-14">
       <div className="stats shadow mx-auto">
         <div className="stat place-items-center">
           <div className="stat-title">Downloads</div>
@@ -22,8 +22,8 @@ const Stats = () => {
           <div className="stat-desc">↘︎ 90 (14%)</div>
         </div>
         <div className="stat place-items-center">
-          <div className="stat-title">New Registers</div>
-          <div className="stat-value">1,200</div>
+          <div className="stat-title">New Events</div>
+          <div className="stat-value text-primary">1,400</div>
           <div className="stat-desc">↘︎ 90 (14%)</div>
         </div>
       </div>

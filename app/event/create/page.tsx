@@ -147,38 +147,41 @@ const CreateEventForm: React.FC = () => {
               <textarea
                 id="eventDescription"
                 value={eventDescription}
+                rows={5}
                 onChange={(e) => setEventDescription(e.target.value)}
                 className="textarea textarea-bordered bg-slate-100 w-full"
                 required
               />
             </div>
 
-            <div className="form-control">
-              <label htmlFor="eventDate" className="label">
-                <span className="label-text">Event Date</span>
-              </label>
-              <input
-                type="date"
-                id="eventDate"
-                value={eventDate}
-                onChange={(e) => setEventDate(e.target.value)}
-                className="input input-bordered bg-slate-100 w-full"
-                required
-              />
-            </div>
+            <div className="grid grid-cols-2 gap-5">
+              <div className="form-control">
+                <label htmlFor="eventDate" className="label">
+                  <span className="label-text">Event Date</span>
+                </label>
+                <input
+                  type="date"
+                  id="eventDate"
+                  value={eventDate}
+                  onChange={(e) => setEventDate(e.target.value)}
+                  className="input input-bordered bg-slate-100 w-full"
+                  required
+                />
+              </div>
 
-            <div className="form-control">
-              <label htmlFor="eventTime" className="label">
-                <span className="label-text">Event Time</span>
-              </label>
-              <input
-                type="time"
-                id="eventTime"
-                value={eventTime}
-                onChange={(e) => setEventTime(e.target.value)}
-                className="input input-bordered bg-slate-100 w-full"
-                required
-              />
+              <div className="form-control">
+                <label htmlFor="eventTime" className="label">
+                  <span className="label-text">Event Time</span>
+                </label>
+                <input
+                  type="time"
+                  id="eventTime"
+                  value={eventTime}
+                  onChange={(e) => setEventTime(e.target.value)}
+                  className="input input-bordered bg-slate-100 w-full"
+                  required
+                />
+              </div>
             </div>
 
             <div className="form-control">
